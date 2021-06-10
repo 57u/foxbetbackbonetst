@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Code Test</title>
+	<!-- some basic styles just to not have times new roman, and some table borders -->
+	<style>
+		body, th, td {
+			font-family: verdana, sans-serif;
+			font-size: 12px;
+		}
+		table, th, td {
+			border: 1px dotted black;
+			border-spacing: 1px;
+		}
+		th, td {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+
+<main id="main"></main>
+
+
+
+<h1>Code Test</h1>
+<p>Markets.selections have pulled from the JSON (mock api endpoint), ordered by row, then col.</p>
+<p>Rendered via a collection of models into a collection of views using a html table row template.</p>
+<p>Global event listener is listening for emitted "bet:addBet" events.</p>
+<p>Click handler on unsuspended buttons that trigger and emit the bet:addBet event, 
+	passing an object containing the marlerts type, and the selected betID.</p>
+	<p>I left a few console logs in there for good measure.</p>
+<hr/>
+
+<table class="list" border="1">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Odds</th>
+        <th>Suspended?</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody class="betItems">
+</tbody>
+</table>
+
+<hr/>
+<h3>Notes</h3>
+<p>After completing this test i realise that you may have meant using the col to display _only_ the buttons - as in 3 buttons in order, in columns...? Eek.</p>
+<p>The above displays them sorted in order, but in table rows showing possibly more detail than required, 
+	the button and the event handlers/listeners of course.</p>
+
+<h4>JSON invalid?</h4>
+<p>Not sure if observation test,  but there was a missing comma in the supplied JSON, see image:<br/>
+	<img src="./missingComma.png" /></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>

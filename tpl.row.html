@@ -1,0 +1,18 @@
+<td><%= data.name %></td>
+<td>
+	<small>
+		row: <%= data.pos.row %><br/>
+		col: <%= data.pos.col %>
+	</small>
+<td>
+	<small>
+		Decimal: <%= data.odds.dec %><br/>
+		Fractional: <%= data.odds.frac %>
+	</small>
+</td>
+<td>
+	<%= data.suspended %>
+</td>
+<td>
+	<button <% if (data.suspended) { %> disabled <% } %>>Button</button>
+</td>
