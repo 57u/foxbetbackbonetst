@@ -54,10 +54,10 @@ App.Views.BetItemView = Backbone.View.extend({
 		var view = this;
 		$.get("./tpl.row.html", function(html) {
 			template = _.template(html, {
-	             data: view.model.toJSON()
-	        });
+	        	data: view.model.toJSON()
+	        	});
 
-	        view.$el.html(template);  
+	        	view.$el.html(template);  
 		});
 
 		return this;
@@ -77,7 +77,7 @@ App.Views.BetItemView = Backbone.View.extend({
 
 // Collection of BetItemView
 App.Views.BetItemsView = Backbone.View.extend({
-    el: '.betItems',
+	el: '.betItems',
 
 	render:function() {
 		this.addAll();
